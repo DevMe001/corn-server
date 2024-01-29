@@ -57,7 +57,7 @@ def hello(name = None):
 @app.get('/send-picture')
 async def detect_image():
     savedModel = load_model('corn_variety_model.h5')
-    image_path = 'Dataset/train/Syngenta NK-6410/IMG20230926160905.jpg'
+    image_path = 'testdata/IMG20221119095007.jpg'
     
     input_image = await preprocess_image(image_path)
     predictions = savedModel.predict(input_image)
